@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Mushfik — Full Stack Developer in Training. Portfolio featuring web development projects, skills and contact information." />
   <title>Mushfik — Full Stack Developer</title>
-  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=Kun49IzCmpNvo4L9zzKmUVdumfozlO6BnqGpM84iJjuTyHHPUANETorJmwcf-LTGvJAywkc4D_TsTOqrxwvbHh9wV7O67ffaSv8PPrff5d093K7FJfiFlBA28c6G3eQ6wfhGsC63zOzUwLBsKAkwa3gG47lF3vL7xerqCG6jJ5dHOxZ44j5rTd8VlHuYHNCUoohbk5DmjFXA-Iqx1neZh-FljSwDJV0Xcm-_8Za_ziFzIdl_5NJhf3bihVDxL67UhcxV2Gusxeuj67Xm5zOilHtfTL9bvFY6UFkAihVNyJCI7f3xbh8kuleZcNUjVQNdZ9xAbvPsPJxE6GnM5JXAKg" charset="UTF-8"></script><style>
+  <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 :root{
@@ -151,8 +151,19 @@ a{color:inherit;text-decoration:none}
   bottom:-7px;
   transform:translateX(-50%);
   width:min(52%,320px);
-  height:390px;
+  height:430px;
   z-index:3;
+  overflow:hidden;
+  border-radius:18px 18px 0 0;
+  box-shadow:0 30px 70px rgba(0,0,0,.22);
+  background:#111;
+}
+.portrait img{
+  width:100%;height:100%;display:block;object-fit:cover;object-position:center 38%;
+  filter:saturate(.92) contrast(1.03);
+}
+.portrait:after{
+  content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.28),transparent 35%);pointer-events:none;
 }
 .portrait-glow{
   position:absolute;inset:18% 8% 0;
@@ -385,7 +396,7 @@ a{color:inherit;text-decoration:none}
   .hero{padding-top:82px}
   .hero-card{min-height:600px}
   .hero h1{font-size:clamp(62px,18vw,110px)}
-  .portrait{width:75%;height:355px}
+  .portrait{width:75%;height:390px}
   .portrait-body{width:230px}
   .orbit-a{width:270px;height:270px}
   .orbit-b{width:410px;height:190px}
@@ -404,6 +415,8 @@ a{color:inherit;text-decoration:none}
   .footer{gap:15px;flex-wrap:wrap}
 }
 
+
+.about-preview{margin-bottom:100px}.about-preview-card{background:#000;color:#fff;border-radius:20px;padding:30px;min-height:430px;position:relative;overflow:hidden}.about-preview-card:before{content:"";position:absolute;width:500px;height:500px;border:1px solid #333;border-radius:50%;right:-210px;bottom:-260px}.about-preview-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end;min-height:320px}.about-preview h2{font-family:var(--display);font-size:clamp(80px,12vw,155px);line-height:.7;letter-spacing:-.09em;margin:0;font-weight:900}.about-preview h2 span{color:#777}.about-preview-grid p:not(.eyebrow){max-width:430px;color:#aaa;font-size:13px;line-height:1.75;margin:0 0 28px}.about-more{display:inline-flex;align-items:center;gap:30px;padding:15px 16px;border:1px solid #444;border-radius:10px;font:9px var(--mono);transition:.3s}.about-more:hover{background:#fff;color:#000;border-color:#fff}@media(max-width:650px){.about-preview-grid{grid-template-columns:1fr;gap:30px}.about-preview-card{padding:22px;min-height:520px}.about-preview h2{font-size:84px}}
   </style>
 </head>
 <body>
@@ -416,7 +429,7 @@ a{color:inherit;text-decoration:none}
     </a>
 
     <nav class="nav" aria-label="Primary navigation">
-      <a href="#about">ABOUT</a>
+      <a href="about.html">ABOUT</a>
       <a href="#skills">SKILLS</a>
       <a href="#projects">PROJECTS</a>
       <a href="#contact">CONTACT</a>
@@ -452,10 +465,8 @@ a{color:inherit;text-decoration:none}
           </h1>
         </div>
 
-        <div class="portrait" aria-label="Mushfik profile placeholder">
-          <div class="portrait-glow"></div>
-          <div class="portrait-head"></div>
-          <div class="portrait-body"></div>
+        <div class="portrait" aria-label="Mushfik profile photo">
+          <img src="https://raw.githubusercontent.com/mushfiyy/portfolio/main/my-img.jpeg" alt="Mushfik profile photo" />
           <div class="portrait-label">MUSHFIK<br /><small>FULL STACK</small></div>
         </div>
 
@@ -479,41 +490,14 @@ a{color:inherit;text-decoration:none}
       </aside>
     </section>
 
-    <section id="about" class="section-shell about-section">
-      <aside class="side-card touch-card">
-        <a class="circle-link" href="#contact">GET IN<br />TOUCH <span>↗</span></a>
-        <div class="side-links">
-          <span>WEB DEVELOPMENT</span>
-          <span>FRONTEND UI</span>
-          <span>FULL STACK</span>
-        </div>
-      </aside>
-
-      <div class="black-panel">
-        <div class="panel-top">
-          <span>02 / ABOUT</span>
-          <span>THE JOURNEY</span>
-        </div>
-        <h2>ABOUT<br /><em>ME.</em></h2>
-        <p>
-          I'm Mushfik, a beginner Full Stack Developer currently studying a
-          Full Stack Development course. I enjoy turning ideas into modern,
-          user-friendly websites and learning by building real projects.
-        </p>
-        <div class="panel-bottom">
-          <span>HTML / CSS / JS / REACT / MONGODB</span>
-          <span>KEEP MOVING →</span>
+    <section class="section-shell about-preview">
+      <div class="about-preview-card">
+        <p class="eyebrow">02 / ABOUT</p>
+        <div class="about-preview-grid">
+          <div><h2>ABOUT<br /><span>ME.</span></h2></div>
+          <div><p>I'm Mushfik, a beginner Full Stack Developer currently studying Full Stack Development and building practical web projects with HTML, CSS, JavaScript, React and MongoDB.</p><a class="about-more" href="about.html">EXPLORE MY STORY <span>↗</span></a></div>
         </div>
       </div>
-
-      <aside class="side-card statement-card">
-        <p class="eyebrow">MY APPROACH</p>
-        <h3>Simple ideas.<br />Strong execution.</h3>
-        <p>
-          I focus on clean layouts, responsive interfaces, readable code and
-          steady improvement.
-        </p>
-      </aside>
     </section>
 
     <section id="skills" class="section-shell skills-section">
