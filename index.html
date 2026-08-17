@@ -8,7 +8,7 @@
       content="Mushfik — mern Stack Developer in Training portfolio"
     />
     <title>Mushfik — mern Stack Developer in Training</title>
-    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=s7EMF03VjiJe1s0LU6ycQ0pvpVG9TvII9BasVe1pF1F159NDKWnkrWTNwWBG81k9RaeTtnHnfOPbDC6F5-q4TcUo7Wv7OqTYshj06JUgsWkhjiRGP4ln5-0eJ82er_fdsto134NzR4eSlxDVv3rbkj9ukjLeqOU9vRbj53Q0G38eEZSlbeQzjFfVX717422RAt_FnFo4CcO4NBzjiDwznY2NC9TFHlIvROt1RtJ2aw8CKr38_FT5cu7-LrAFYIVm5v9lrqCkKm0g1Ul6Ef9otA" charset="UTF-8"></script><style>
+    <style>
       @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap");
 
       :root {
@@ -38,24 +38,8 @@
         line-height: 1.65;
         overflow-x: hidden;
       }
-      body:before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        pointer-events: none;
-        z-index: -2;
-        background:
-          radial-gradient(
-            circle at 50% 15%,
-            rgba(232, 189, 134, 0.09),
-            transparent 32%
-          ),
-          radial-gradient(
-            circle at 10% 70%,
-            rgba(255, 255, 255, 0.025),
-            transparent 25%
-          );
-      }
+      body:before { content:""; display:none; }
+
       body:after {
         content: "";
         position: fixed;
@@ -688,20 +672,6 @@
       }
 
       /* floating cursor accent */
-      .cursor-glow {
-        position: fixed;
-        width: 280px;
-        height: 280px;
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: -1;
-        background: radial-gradient(
-          circle,
-          rgba(232, 189, 134, 0.055),
-          transparent 65%
-        );
-        transform: translate(-50%, -50%);
-      }
 
       /* mobile */
       @media (max-width: 950px) {
@@ -851,10 +821,67 @@
           height: 500px;
         }
       }
-    </style>
-  </head>
+    
+.contact-icon{
+  width:46px;height:46px;min-width:46px;border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;display:grid;place-items:center;
+  background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.025));
+  color:#e9a95f;font-size:20px;transition:.25s ease;
+}
+.contact-item:hover .contact-icon{
+  color:#111;background:#e9a95f;border-color:#e9a95f;transform:none;
+}
+.contact-item{display:flex;align-items:center;gap:14px;}
+.contact-item i{line-height:1;}
+
+
+      .tech-icon {
+        display:block;
+        font-size:2.7rem;
+        margin-top:18px;
+        margin-bottom:2px;
+      }
+      .html-icon { color:#e34f26; }
+      .css-icon { color:#1572b6; }
+      .js-icon { color:#f7df1e; }
+      .react-icon { color:#61dafb; }
+      .mongo-icon { color:#47a248; }
+      .node-icon { color:#68a063; }
+      .express-icon { color:#f1f1f1; }
+      .git-icon { color:#f05032; }
+      .skill .tech-icon { transition:opacity .2s ease; }
+      .skill:hover .tech-icon { opacity:.82; }
+      .project-icon {
+        width:58px;height:58px;border-radius:15px;
+        display:grid;place-items:center;
+        font-size:25px;margin-bottom:18px;
+        border:1px solid rgba(255,255,255,.12);
+        background:#101010;
+      }
+      .todo-project-icon { color:#22c55e; }
+      .openai-project-icon { color:#10a37f; }
+      .project:hover .project-icon { opacity:.82; }
+      .project-icon { transition:opacity .2s ease; }
+      .contact-icon {
+        width:46px;height:46px;min-width:46px;border:1px solid rgba(255,255,255,.12);
+        border-radius:12px;display:grid;place-items:center;
+        background:#101010;
+        font-size:20px;transition:.25s ease;
+      }
+      .contact-item:nth-child(1) .contact-icon { color:#ea4335; }
+      .contact-item:nth-child(2) .contact-icon { color:#4ade80; }
+      .contact-item:nth-child(3) .contact-icon { color:#f5f5f5; }
+      .contact-item:nth-child(4) .contact-icon { color:#e1306c; }
+      .contact-item:hover .contact-icon {
+        background:#171717;
+        border-color:currentColor;
+        transform:none;
+      }
+
+</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
   <body>
-    <div class="cursor-glow" id="cursorGlow"></div>
 
     <header class="nav">
       <a class="brand" href="#home" aria-label="Mushfik home">
@@ -968,48 +995,56 @@
           <div class="skills-grid">
             <article class="skill panel reveal" style="--w: 88%">
               <span class="skill-number">01</span>
+              <i class="fa-brands fa-html5 tech-icon html-icon" aria-hidden="true"></i>
               <h3>HTML</h3>
               <p>Semantic, accessible structure.</p>
               <div class="skill-bar"><i></i></div>
             </article>
             <article class="skill panel reveal" style="--w: 84%">
               <span class="skill-number">02</span>
+              <i class="fa-brands fa-css3-alt tech-icon css-icon" aria-hidden="true"></i>
               <h3>CSS</h3>
               <p>Responsive layouts and visual design.</p>
               <div class="skill-bar"><i></i></div>
             </article>
             <article class="skill panel reveal" style="--w: 78%">
               <span class="skill-number">03</span>
+              <i class="fa-brands fa-js tech-icon js-icon" aria-hidden="true"></i>
               <h3>JavaScript</h3>
               <p>Interactive and dynamic experiences.</p>
               <div class="skill-bar"><i></i></div>
             </article>
             <article class="skill panel reveal" style="--w: 70%">
               <span class="skill-number">04</span>
+              <i class="fa-brands fa-react tech-icon react-icon" aria-hidden="true"></i>
               <h3>React</h3>
               <p>Component-based frontend development.</p>
               <div class="skill-bar"><i></i></div>
             </article>
             <article class="skill panel reveal" style="--w: 66%">
               <span class="skill-number">05</span>
+              <i class="fa-solid fa-leaf tech-icon mongo-icon" aria-hidden="true"></i>
               <h3>MongoDB</h3>
               <p>Working with application data.</p>
               <div class="skill-bar"><i></i></div>
             </article>
             <article class="skill panel reveal" style="--w: 70%">
               <span class="skill-number">06</span>
+              <i class="fa-brands fa-node-js tech-icon node-icon" aria-hidden="true"></i>
               <h3>Node.js</h3>
               <p>Backend development with JavaScript.</p>
               <div class="skill-bar"><i></i></div>
             </article>
             <article class="skill panel reveal" style="--w: 66%">
               <span class="skill-number">07</span>
+              <i class="fa-solid fa-server tech-icon express-icon" aria-hidden="true"></i>
               <h3>Express</h3>
               <p>Building backend APIs and routes.</p>
               <div class="skill-bar"><i></i></div>
             </article>
             <article class="skill panel reveal" style="--w: 72%">
               <span class="skill-number">08</span>
+              <i class="fa-brands fa-git-alt tech-icon git-icon" aria-hidden="true"></i>
               <h3>Git</h3>
               <p>Version control and GitHub workflow.</p>
               <div class="skill-bar"><i></i></div>
@@ -1029,6 +1064,7 @@
           <div class="projects">
             <article class="project panel reveal">
               <div>
+                <div class="project-icon todo-project-icon" aria-hidden="true"><i class="fa-solid fa-list-check"></i></div>
                 <div class="project-index">01</div>
                 <h3>To-Do List</h3>
                 <p>
@@ -1059,6 +1095,7 @@
 
             <article class="project panel reveal">
               <div>
+                <div class="project-icon openai-project-icon" aria-hidden="true"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
                 <div class="project-index">02</div>
                 <h3>OpenAI Clone</h3>
                 <p>
@@ -1143,13 +1180,13 @@
             <div class="contact-card panel reveal">
               <div class="contact-list">
                 <a class="contact-item" href="mailto:mushfiyy@gmail.com"
-                  ><div class="contact-icon">✉</div>
+                  ><div class="contact-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></div>
                   <div>
                     <small>Email</small><strong>mushfiyy@gmail.com</strong>
                   </div></a
                 >
                 <a class="contact-item" href="tel:+919037443783"
-                  ><div class="contact-icon">☎</div>
+                  ><div class="contact-icon" aria-hidden="true"><i class="fa-solid fa-phone"></i></div>
                   <div>
                     <small>Phone</small
                     ><strong class="phone">9037443783</strong>
@@ -1160,7 +1197,7 @@
                   href="https://github.com/mushfiyy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  ><div class="contact-icon">GH</div>
+                  ><div class="contact-icon" aria-hidden="true"><i class="fa-brands fa-github"></i></div>
                   <div>
                     <small>GitHub</small><strong>github.com/mushfiyy</strong>
                   </div></a
@@ -1170,7 +1207,7 @@
                   href="https://www.instagram.com/mushfiyy_?igsh=YjdwMHZiN2t5Mng3&utm_source=qr"
                   target="_blank"
                   rel="noopener noreferrer"
-                  ><div class="contact-icon">IG</div>
+                  ><div class="contact-icon" aria-hidden="true"><i class="fa-brands fa-instagram"></i></div>
                   <div>
                     <small>Instagram</small><strong>@mushfiyy_</strong>
                   </div></a
