@@ -886,27 +886,21 @@
       }
 
       .express-logo {
-        width: 58px;
-        height: 58px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
+        display: block;
+        width: 42px;
+        height: 42px;
+        max-width: 42px;
+        max-height: 42px;
+        object-fit: contain;
         margin-top: 18px;
         margin-bottom: 2px;
+        filter: invert(1) brightness(1.9);
+        transition: opacity 0.2s ease, transform 0.45s;
       }
 
-      .express-logo img {
-        width: 58px;
-        height: 58px;
-        object-fit: contain;
-        display: block;
-        filter: brightness(0) invert(1);
-        transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
-      }
-
-      .skill:hover .express-logo img {
+      .skill:hover .express-logo {
+        opacity: 0.82;
         transform: translateY(-6px) scale(1.08);
-        filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(232, 189, 134, 0.35));
       }
       .git-icon {
         color: #f05032;
@@ -1455,9 +1449,13 @@
             </article>
             <article class="skill panel reveal" style="--w: 66%">
               <span class="skill-number">07</span>
-              <span class="express-logo tech-icon" aria-label="Express.js logo">
-                <img src="https://expressjs.com/images/express-logo-light.svg" alt="Express.js" loading="lazy" />
-              </span>
+              <img
+                class="tech-icon express-logo"
+                src="https://raw.githubusercontent.com/openjs-foundation/artwork/ac43961d1157f973c54f210cf5e0c9c45e3d3f10/projects/express/express-icon-black.svg"
+                alt=""
+                aria-hidden="true"
+                loading="eager"
+              />
               <h3>Express</h3>
               <p>Building backend APIs and routes.</p>
               <div class="skill-bar"><i></i></div>
